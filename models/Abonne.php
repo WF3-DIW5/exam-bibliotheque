@@ -48,8 +48,15 @@ class Abonne extends Db {
      */ 
     public function setNom($nom)
     {
-        $this->nom = $nom;
+        if (strlen($nom) == 0) {
+            throw new Exception('Le nom ne doit pas être nul.');
+        }
 
+        if (strlen($nom) > 150) {
+            throw new Exception('Le nom ne doit pas être plus long que 150 caractères.');
+        }
+
+        $this->nom = $nom;
         return $this;
     }
 
@@ -68,8 +75,15 @@ class Abonne extends Db {
      */ 
     public function setPrenom($prenom)
     {
-        $this->prenom = $prenom;
+        if (strlen($prenom) == 0) {
+            throw new Exception('Le prénom ne doit pas être nul.');
+        }
 
+        if (strlen($prenom) > 150) {
+            throw new Exception('Le prénom ne doit pas être plus long que 150 caractères.');
+        }
+
+        $this->prenom = $prenom;
         return $this;
     }
 

@@ -47,10 +47,18 @@ class Ouvrage extends Db {
      *
      * @return  self
      */ 
-    public function setTitre($titre)
+    public function setTitre(string $titre)
     {
-        $this->titre = $titre;
 
+        if (strlen($titre) == 0) {
+            throw new Exception('Le titre ne doit pas être nul.');
+        }
+
+        if (strlen($titre) > 150) {
+            throw new Exception('Le titre ne doit pas être plus long que 150 caractères.');
+        }
+
+        $this->titre = $titre;
         return $this;
     }
 
@@ -69,8 +77,15 @@ class Ouvrage extends Db {
      */ 
     public function setAuteur($auteur)
     {
-        $this->auteur = $auteur;
+        if (strlen($auteur) == 0) {
+            throw new Exception('L\'auteur ne doit pas être nul.');
+        }
 
+        if (strlen($auteur) > 150) {
+            throw new Exception('L\'auteur ne doit pas être plus long que 150 caractères.');
+        }
+
+        $this->auteur = $auteur;
         return $this;
     }
 
