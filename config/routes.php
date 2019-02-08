@@ -22,5 +22,6 @@ $routes->post('/emprunts/save',       'EmpruntsController@save');
 $routes->get('/emprunts/(\d+)/delete','EmpruntsController@delete');
 
 $routes->get('/',  'PagesController@home');
+$routes->get('/divers',  'PagesController@divers');
 
 $routes->run();

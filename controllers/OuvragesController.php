@@ -33,6 +33,10 @@ class OuvragesController {
 
     public function delete($id) {
 
+        $ouvrage = Ouvrage::findOne($id);
+        $ouvrage->delete();
+        Header('Location: '. url('ouvrages'));
+
     }
 
 }

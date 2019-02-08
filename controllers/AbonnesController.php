@@ -35,6 +35,8 @@ class AbonnesController {
     }
 
     public function delete($id) {
-
+        $abonne = Abonne::findOne($id);
+        $abonne->delete();
+        Header('Location: '. url('abonnes'));
     }   
 }
