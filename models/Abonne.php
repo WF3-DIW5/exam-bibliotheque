@@ -93,14 +93,14 @@ class Abonne extends Db {
 
     }
 
-    public function findAll() {
+    public static function findAll() {
 
         $datas = Db::dbFind(self::TABLE_NAME);
 
         $abonnes = [];
 
         foreach($datas as $data) {
-            $abonnes[] = new Abonne($data['auteur'], $data['titre'], $data['id']);
+            $abonnes[] = new Abonne($data['nom'], $data['prenom'], $data['id']);
         }
 
         return $abonnes;

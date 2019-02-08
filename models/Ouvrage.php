@@ -83,7 +83,7 @@ class Ouvrage extends Db {
      * CRUD Methods
      */
 
-    public function findOne(int $id) {
+    public static function findOne(int $id) {
 
         $data = Db::dbFind(self::TABLE_NAME, [
             ['id' => $id]
@@ -95,7 +95,7 @@ class Ouvrage extends Db {
 
     }
 
-    public function findAll() {
+    public static function findAll() {
 
         $datas = Db::dbFind(self::TABLE_NAME);
 

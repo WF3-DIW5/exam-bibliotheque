@@ -1,2 +1,9 @@
+[2019-02-08 13:57:52] INSERT INTO association_abonne_ouvrage (`id_abonne`, `id_ouvrage`) VALUES ('1', '1') 
+[2019-02-08 13:56:25] SELECT * FROM ouvrage
+[2019-02-08 13:56:25] SELECT * FROM abonne
+[2019-02-08 13:55:54] SELECT * FROM ouvrage
+[2019-02-08 13:55:54] SELECT * FROM abonne
+[2019-02-08 13:55:16] SELECT * FROM ouvrage
+[2019-02-08 13:55:16] SELECT * FROM abonne
 [2019-02-08 13:52:49] INSERT INTO abonne (`nom`, `prenom`) VALUES ('Watson', 'Emma') 
 [2019-02-08 13:52:16] INSERT INTO ouvrage (`auteur`, `titre`) VALUES ('Albert Camus', 'L'étranger') 

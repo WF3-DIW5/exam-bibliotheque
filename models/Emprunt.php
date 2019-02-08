@@ -73,7 +73,7 @@ class Emprunt extends Db {
         return $this;
     }
 
-    public function findOne(int $id) {
+    public static function findOne(int $id) {
 
         $data = Db::dbFind(self::TABLE_NAME, [
             ['id' => $id]
@@ -85,7 +85,7 @@ class Emprunt extends Db {
 
     }
 
-    public function findAll() {
+    public static function findAll() {
 
         $datas = Db::dbFind(self::TABLE_NAME);
 
