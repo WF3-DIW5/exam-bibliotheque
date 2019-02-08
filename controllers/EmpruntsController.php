@@ -3,6 +3,8 @@
 class EmpruntsController {
 
     public function index() {
+        $emprunts = Emprunt::findAll();
+        view('emprunts.index', compact('emprunts'));
 
     }
 

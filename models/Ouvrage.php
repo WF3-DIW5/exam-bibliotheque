@@ -101,8 +101,12 @@ class Ouvrage extends Db {
     public static function findOne(int $id) {
 
         $data = Db::dbFind(self::TABLE_NAME, [
-            ['id' => $id]
+            ['id', '=', $id]
         ]);
+
+        if(count($data) > 0) $data = $data[0];
+        else return;
+
 
         $ouvrage = new Ouvrage($data['auteur'], $data['titre'], $data['id']);
 

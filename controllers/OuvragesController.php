@@ -3,7 +3,8 @@
 class OuvragesController {
 
     public function index() {
-
+        $ouvrages = Ouvrage::findAll();
+        view('ouvrages.index', compact('ouvrages'));
     }
 
     public function show($id) {

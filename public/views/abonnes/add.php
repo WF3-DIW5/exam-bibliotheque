@@ -1,6 +1,7 @@
-<?php ob_start(); 
+<?php ob_start(); ?>
 
-?>
+<a href="<?= url('abonnes') ?>">Retour</a>
+
 
 <form action="<?= url('abonnes/save') ?>" method="post">
 

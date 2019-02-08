@@ -1,4 +1,5 @@
 <?php ob_start(); ?>
+<a href="<?= url('emprunts') ?>">Retour</a>
 
 <form action="<?= url('emprunts/save') ?>" method="post">
 

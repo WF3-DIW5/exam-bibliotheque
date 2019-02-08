@@ -95,13 +95,16 @@ class Abonne extends Db {
      * CRUD Methods
      */
 
-    public function findOne(int $id) {
+    public static function findOne(int $id) {
 
         $data = Db::dbFind(self::TABLE_NAME, [
-            ['id' => $id]
+            ['id', '=', $id]
         ]);
+        
+        if(count($data) > 0) $data = $data[0];
+        else return;
 
-        $abonne = new Abonne($data['auteur'], $data['titre'], $data['id']);
+        $abonne = new Abonne($data['nom'], $data['prenom'], $data['id']);
 
         return $abonne;
 

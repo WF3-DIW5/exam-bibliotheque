@@ -79,6 +79,7 @@ class Db {
      * ];
      */
     protected static function dbFind(string $table, array $request = null) {
+
         $bdd = self::getDb();
         $req = "SELECT * FROM " . $table;
         if (isset($request)) {

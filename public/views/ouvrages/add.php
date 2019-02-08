@@ -1,5 +1,7 @@
 <?php ob_start(); ?>
 
+<a href="<?= url('ouvrages') ?>">Retour</a>
+
 <form action="<?= url('ouvrages/save') ?>" method="post">
 
     <input type="hidden" name="id"     value="<?= (isset($ouvrage)) ? $ouvrage->id() : '' ?>">

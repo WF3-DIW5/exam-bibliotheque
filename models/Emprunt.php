@@ -79,6 +79,9 @@ class Emprunt extends Db {
             ['id' => $id]
         ]);
 
+        if(count($data) > 0) $data = $data[0];
+        else return;
+
         $emprunt = new Emprunt($data['id_abonne'], $data['id_ouvrage'], $data['id']);
 
         return $emprunt;
@@ -139,5 +142,14 @@ class Emprunt extends Db {
         ]);
 
         return;
+    }
+
+    public function abonne() {
+
+        return Abonne::findOne($this->idAbonne());
+    }
+
+    public function ouvrage() {
+        return Ouvrage::findOne($this->idOuvrage());
     }
 }

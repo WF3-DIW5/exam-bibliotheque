@@ -4,6 +4,9 @@ class AbonnesController {
 
     public function index() {
 
+        $abonnes = Abonne::findAll();
+        view('abonnes.index', compact('abonnes'));
+
     }
 
     public function show($id) {
