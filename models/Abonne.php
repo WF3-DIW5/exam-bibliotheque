@@ -73,6 +73,10 @@ class Abonne extends Db {
         return $this;
     }
 
+    public function nomComplet() {
+        return $this->prenom() . ' ' . $this->nom();
+    }
+
     /**
      * CRUD Methods
      */

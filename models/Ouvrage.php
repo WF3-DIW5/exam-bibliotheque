@@ -74,6 +74,11 @@ class Ouvrage extends Db {
         return $this;
     }
 
+    public function nomComplet() {
+        
+        return $this->auteur . ' - ' . $this->titre();
+    }
+
     /**
      * CRUD Methods
      */

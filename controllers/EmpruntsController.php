@@ -7,6 +7,7 @@ class EmpruntsController {
     }
 
     public function add() {
+        view('emprunts.add');
 
     }
 
