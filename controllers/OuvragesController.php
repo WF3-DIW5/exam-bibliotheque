@@ -8,7 +8,8 @@ class OuvragesController {
     }
 
     public function show($id) {
-
+        $ouvrage = Ouvrage::findOne($id);
+        view('ouvrages.show', compact('ouvrage'));
     }
 
     public function add() {
@@ -26,7 +27,8 @@ class OuvragesController {
     }
 
     public function edit($id) {
-
+        $ouvrage = Ouvrage::findOne($id);
+        view('ouvrages.add', compact('ouvrage'));
     }
 
     public function delete($id) {

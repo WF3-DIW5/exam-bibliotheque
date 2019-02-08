@@ -11,6 +11,8 @@ class AbonnesController {
 
     public function show($id) {
 
+        $abonne = Abonne::findOne($id);
+        view('abonnes.show', compact('abonne'));
     }
 
     public function add() {
@@ -28,7 +30,8 @@ class AbonnesController {
     }
 
     public function edit($id) {
-
+        $abonne = Abonne::findOne($id);
+        view('abonnes.add', compact('abonne'));
     }
 
     public function delete($id) {

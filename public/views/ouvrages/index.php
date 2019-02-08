@@ -13,7 +13,11 @@
 
     <?php foreach($ouvrages as $ouvrage) : ?>
         <tr>
-            <td><?= $ouvrage->id() ?></td>
+            <td>
+                <a href="<?= url('ouvrages/' . $ouvrage->id())?>">
+                    <?= $ouvrage->id() ?>
+                </a>
+            </td>
             <td><?= $ouvrage->auteur() ?></td>
             <td><?= $ouvrage->titre() ?></td>
             <td>

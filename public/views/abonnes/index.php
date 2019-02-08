@@ -13,7 +13,11 @@
 
     <?php foreach($abonnes as $abonne) : ?>
         <tr>
-            <td><?= $abonne->id() ?></td>
+            <td>
+                <a href="<?= url('abonnes/' . $abonne->id())?>">
+                    <?= $abonne->id() ?>
+                </a>
+            </td>
             <td><?= $abonne->prenom() ?></td>
             <td><?= $abonne->nom() ?></td>
             <td>
